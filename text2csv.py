@@ -18,4 +18,4 @@ if(len(sys.argv) == 2):
 
 else:
 	
-	print(f"{sys.argv[0] filename.txt}")
+	print(f"Usage : {sys.argv[0] filename.txt}")
