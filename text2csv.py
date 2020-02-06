@@ -2,12 +2,12 @@
 
 import pandas as pd
 import re
-import os
+import sys
 
 
-if(len(os.argv) == 2)
+if(len(sys.argv) == 2):
 	
-	file = open(os.argv[1])
+	file = open(sys.argv[1])
 	text = file.read()
 
 	email = re.findall(r'([A-Za-z0-9]*@[a-z]*.\w*)',text)
@@ -16,6 +16,6 @@ if(len(os.argv) == 2)
 	email_list = pd.DataFrame(email)
 	email_list.to_csv('emails.csv')
 
-else
+else:
 	
-	print(f"{os.argv[0] filename.txt}")
+	print(f"{sys.argv[0] filename.txt}")
